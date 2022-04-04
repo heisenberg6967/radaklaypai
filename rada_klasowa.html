@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+    <meta charset="UTF-8"/>
+<link href="rada_klasowa.css" rel="stylesheet" type="text/css">
+<title>Rada klasowa</title>
+    </head>
+
+<body style="">
+
+    <div id="container">
+        <div id="panel-lewy">
+<h1>Aktualności</h1><br>
+<h3>Co robimy?</h3><br>
+<ol>
+<li>Pomagamy w nauce</li>
+<li>Informujemy o prawach ucznia</li>
+<li>Prowadzimy finanse klasy</li>
+</ol><br>
+<h3>Skład rady</h3><br>
+<table>
+<tr><td rowspan="3">Jan Abacki Przewodniczący</td> <td>Anna Babacka</td></tr>
+<tr><td>Anna Cabacka</td></tr>
+<tr><td>Krzysztof Nowak</td></tr>
+</table>
+        </div>
+
+        <div id="panel-prawy">
+            <h1>Nasza klasa</h1>
+<img src="klasa.png">
+
+			<script>
+				document.write("<h3>CELE RADY UCZNIÓW</h3><p>Podstawowym celem Rady jest reprezentowanie interesów uczniów Szkoły przez podejmowanie działań, jako organu Szkoły, wynikających z przepisów prawa, statutu oraz regulaminu.</p>");
+			</script>
+			
+			<script>
+			alert("Witaj na stronie !!!");
+			</script>
+			
+			
+        </div>
+		
+        <div id="footer">
+		Autor strony: Kamil Stefaniak
+		<br><br>
+		<script>
+
+        function zegarek()
+        {
+            var data = new Date();
+            var godzina = data.getHours();
+            var minuta = data.getMinutes();
+            var sekunda = data.getSeconds();
+            var dzien = data.getDate();
+            var dzienN = data.getDay();
+            var miesiac = data.getMonth();
+            var rok = data.getFullYear();
+           
+            if (minuta < 10) minuta = "0" + minuta;
+            if (sekunda < 10) sekunda = "0" + sekunda;
+           
+            var dni = new Array("niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota");
+            var miesiace = new Array("stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia");
+           
+            var pokazDate = "Dzisiaj jest " + dni[dzienN] + ', ' + dzien + ' ' + miesiace[miesiac] + ' ' + rok + " roku.<br />Godzina " + godzina + ':' + minuta + ':' + sekunda;
+            document.getElementById("zegar").innerHTML = pokazDate;
+           
+            setTimeout(zegarek, 1000);            
+        }        
+		</script>
+
+
+		<body onload="zegarek()">
+		<div id="zegar"></div> 
+			</script>
+
+        </div>
+    </div>
+	
+
+</body>
+
+</html>
